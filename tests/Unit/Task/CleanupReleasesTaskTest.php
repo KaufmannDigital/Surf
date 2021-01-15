@@ -102,7 +102,7 @@ class CleanupReleasesTaskTest extends BaseTaskTest
             function ($carry, $folder) {
                 return $carry . sprintf(
                     'rm -rf %1$s/%2$s;rm -f %1$s/%2$sREVISION;',
-                    $this->application->getReleasesPath(),
+                    $this->node->getReleasesPath(),
                     $folder
                 );
             },
@@ -155,7 +155,7 @@ class CleanupReleasesTaskTest extends BaseTaskTest
             function ($command, $folder) {
                 return $command . sprintf(
                     'rm -rf %1$s/%2$s;rm -f %1$s/%2$sREVISION;',
-                    $this->application->getReleasesPath(),
+                    $this->node->getReleasesPath(),
                     $folder
                 );
             },
